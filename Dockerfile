@@ -1,8 +1,8 @@
-FROM python:3.6
+FROM python:3.11.0rc1-slim-bullseye
 LABEL maintainer="prakash"
-COPY . /src
-WORKDIR /src/src
-ENV FLASK_APP=base.py
+COPY . /
+WORKDIR /src
+ENV FLASK_APP=app.py
 RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD ["flask","run","--host=0.0.0.0"]
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
