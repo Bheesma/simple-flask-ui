@@ -18,8 +18,8 @@ flask run
 
 * Build docker image and start the container
 ```
-docker build -t flaskapp:1 .
-docker run -p 8080:8080 -d flaskapp:1
+docker build -t flask-ui:1 .
+docker run -p 8080:8080 -d flask-ui:1
 ```
 * Browse http://localhost:8080
 
